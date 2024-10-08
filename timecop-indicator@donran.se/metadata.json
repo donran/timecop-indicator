@@ -1,0 +1,8 @@
+{
+  "name": "timecop-indicator",
+  "description": "Timecop Indicator for GNOME",
+  "uuid": "timecop-indicator@donran.se",
+  "shell-version": [
+    "46"
+  ]
+}
