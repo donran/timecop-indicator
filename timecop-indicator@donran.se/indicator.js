@@ -103,16 +103,15 @@ export class TimecopIndicator extends PanelMenu.Button {
     millisecondsToString(ms) {
         ms = Math.floor(ms/1000);
         let out = [];
-        if (ms > 60*60) {
-            const hours = Math.floor(ms/(60*60));
-            out.push(hours);
-            ms -= hours*60*60;
-        }
-        if (ms > 60) {
-            const minutes = Math.floor(ms/(60));
-            out.push(minutes);
-            ms -= minutes*60;
-        }
+
+        const hours = Math.floor(ms/(60*60));
+        out.push(hours);
+        ms -= hours*60*60;
+
+        const minutes = Math.floor(ms/(60));
+        out.push(minutes);
+        ms -= minutes*60;
+
         out.push(ms);
         return out.map(e => e.toString().padStart(2,'0')).join(':');
     }
